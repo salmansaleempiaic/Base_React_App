@@ -18,5 +18,9 @@ jobs:
         run: yarn build
       - name: Install Surge
         run: npm install --global surge
+      - name: Install PropTypes
+        run: npm install prop-types
+      - name: Install MomentJs
+        run: npm install moment
       - name: Deploy to Surge
         run: surge ./build piaic_bootcamp_class2_base_react_app.surge.sh --token ${{ secrets.SURGE_TOKEN }}
