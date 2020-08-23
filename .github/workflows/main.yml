@@ -15,9 +15,9 @@ jobs:
         with:
           cmd: install # will run `yarn install` command
       - name: Install PropTypes
-        run: npm install prop-types
+        run: yarn add prop-types
       - name: Install MomentJs
-        run: npm install moment
+        run: yarn add moment
       - name: Build React App
         run: yarn build
       - name: Install Surge
