@@ -27,9 +27,12 @@ jobs:
     - uses: borales/actions-yarn@v2.0.0
       with:
        cmd: install # will run `yarn install` command
+       
     - name: Yarn Build
       run: yarn build
+      
     - name: Install Surge
       run: npm install -g surge
+      
     - name: Deploy Surge
       run: surge ./build piaic_bootcamp_class2_base_react_app.surge.sh --token ${{ secrets.SURGE_TOKEN }}
